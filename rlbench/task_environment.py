@@ -100,7 +100,7 @@ class TaskEnvironment(object):
             observations = self._action_mode.action(self._scene, action)
         except Exception as e:
             print(e)
-            return self._scene.get_observation(), 0.0, True, []
+            return self._scene.get_observation(), 0.0, False, [] # Don't give up at exception
         success, terminate = self._task.success()
         task_reward = self._task.reward()
         reward = float(success) if task_reward is None else task_reward
