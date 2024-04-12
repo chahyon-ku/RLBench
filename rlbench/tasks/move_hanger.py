@@ -22,7 +22,7 @@ class MoveHanger(Task):
     def init_episode(self, index: int) -> List[str]:
         self.hanger.set_position(
             [self.initx + np.random.uniform(-0.1, 0.3), self.inity, self.initz])
-        return ['move hanger onto the other rack'
+        return ['move hanger onto the other rack',
                 'move the hanger from one rack to the other',
                 'put the hanger on the other rack',
                 'pick up the hanger and place it on the other rack']

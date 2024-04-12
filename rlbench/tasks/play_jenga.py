@@ -21,7 +21,7 @@ class PlayJenga(Task):
         self.register_graspable_objects([target])
 
     def init_episode(self, index: int) -> List[str]:
-        return ['play jenga'
+        return ['play jenga',
                 'Take the protruding block out of the jenga tower without the '
                 'tower toppling',
                 'Keeping the tower from tumbling, remove the protruding '
